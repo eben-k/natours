@@ -10,6 +10,11 @@
   visibility: hidden;
   transition: all 0.3s;
 
+
+  @supports (backdrop-filter: blur(10px)) {
+    backdrop-filter: blur(10px);
+  }
+
   &__content {
     @include absoluteCenter;
     width: 75%;
@@ -45,7 +50,6 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
-
 
     @include respond(tab-portrait) {
       width: 50%;
